@@ -1,0 +1,26 @@
+// Typography
+
+@font-face {
+  font-family: 'GTHaptikRegular';
+  src: url('../fonts/GT-Haptik-Regular.eot');
+  src: url('../fonts/GT-Haptik-Regular.eot?#iefix') format('embedded-opentype'), 
+       url('../fonts/GT-Haptik-Regular.woff') format('woff'),
+       url('../fonts/GT-Haptik-Regular.ttf')  format('truetype'),
+       url('../fonts/GT-Haptik-Regular.svg#c450015735aa87b075b0f77584fafd51') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GTHaptikBlack';
+  src: url('../fonts/GT-Haptik-Black.eot');
+  src: url('../fonts/GT-Haptik-Black.eot?#iefix') format('embedded-opentype'), 
+       url('../fonts/GT-Haptik-Black.woff') format('woff'),
+       url('../fonts/GT-Haptik-Black.ttf')  format('truetype'),
+       url('../fonts/GT-Haptik-Black.svg#158c1a7a6493e039f99284ad95ba012d') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Fonts
+$regular: 'GTHaptikRegular', sans-serif;
+$bold: 'GTHaptikBlack', sans-serif;
