@@ -745,11 +745,9 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
     z-index: 3;
 
     .title{
-      left: 0;
+      left: 3.33vw;
       white-space: nowrap;
       padding-bottom: 10px;
-      margin-left: 50vw;
-      transform: translateX(-50%);
       h1 {
         font-size: 14px;
         line-height: 11px;
@@ -787,7 +785,7 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
       padding-bottom: 0;
     }
 
-    .location{
+    .time{
       transform: translateY(-5px);
     }
     .location{
@@ -927,10 +925,10 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
     bottom: 0;
 
     .title{
-      left: 0;
+      left: 50vw;
+      position: absolute;
       white-space: nowrap;
       padding-bottom: 10px;
-      margin-left: 50vw;
       transform: translateX(-50%);
       h1 {
         font-size: 14px;
@@ -950,17 +948,17 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
     }
 
     .time,.location{
-        left: 0;
+        z-index: 5;
+        left: 50vw;
         bottom: 50vh;
+        position: absolute;
       h2{
         white-space: nowrap;
-        margin-left: 50vw;
         transform: translateX(-50%);
         text-align: center;
       }
       p{
         white-space: nowrap;
-        margin-left: 50vw;
         transform: translateX(-50%);
         text-align: center;
         margin-top: 0;
@@ -969,7 +967,7 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
       padding-bottom: 0;
     }
 
-    .location{
+    .time{
       transform: translateY(-5px);
     }
     .location{
