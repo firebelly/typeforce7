@@ -155,7 +155,7 @@ var Main = (function ($) {
           console.log(window.globalWheel);
           //thanks:  http://stackoverflow.com/questions/3515446/jquery-mousewheel-detecting-when-the-wheel-stops
         
-          event.preventDefault();
+          //event.preventDefault();
 
        });
 
