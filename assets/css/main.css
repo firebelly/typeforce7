@@ -593,6 +593,63 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
   bottom: 22.2222222%;
 }
 
+.info {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  position: absolute;
+}
+.info .title, .info .time, .info .location {
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+  font-family: "GTHaptikRegular", sans-serif;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  line-height: 15px;
+  margin: 0;
+  padding: 0 0 19px 0;
+}
+.info .title h1, .info .time h1, .info .location h1 {
+  color: #FF0000;
+  font-size: 43px;
+  letter-spacing: .06em;
+  margin: 0;
+  padding: 0;
+  line-height: 37px;
+}
+.info .title h2, .info .time h2, .info .location h2 {
+  font-size: 14px;
+  letter-spacing: .06em;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+}
+.info .title a, .info .time a, .info .location a {
+  text-decoration: none;
+  position: relative;
+  line-height: 15px;
+}
+.info .title a::after, .info .time a::after, .info .location a::after {
+  left: 0;
+  right: 2px;
+  height: 1px;
+  content: '';
+  bottom: -2px;
+  position: absolute;
+  background: #fff;
+}
+.info .title {
+  left: 6.25vw;
+}
+.info .time {
+  left: 31.25vw;
+}
+.info .location {
+  left: 43.75vw;
+}
+
 .submit {
   left: 0;
   right: 0;
@@ -632,14 +689,14 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
 .submit-modal {
   opacity: 0;
   z-index: 3;
-  width: 50vh;
-  left: 100px;
+  display: block;
+  width: 450px;
+  left: 6.25vw;
+  bottom: 11.11vh;
   color: #0000FF;
-  padding: 40px;
-  min-width: 400px;
+  padding: 20px 35px 20px 35px;
   background: #fff;
   position: absolute;
-  bottom: 22.2222222%;
   pointer-events: none;
   transition: all 0.2s ease-out;
 }
@@ -660,12 +717,21 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
   position: absolute;
 }
 .submit-modal h2 {
-  margin: 0;
+  margin: 0 0 7px 0;
   font-size: 14px;
+  line-height: 11px;
   letter-spacing: .06em;
+  text-transform: uppercase;
 }
 .submit-modal p {
-  margin: 0 0 1em;
+  margin: 0 0 17px 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: .18em;
+  line-height: 15px;
+}
+.submit-modal p:last-child {
+  margin: 0;
 }
 .submit-modal ul {
   padding: 0;
@@ -681,6 +747,9 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
   left: 0;
   content: '+';
   position: absolute;
+}
+.submit-modal .participants {
+  display: none;
 }
 
 .top .s {
@@ -698,7 +767,6 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
   border-radius: 50%;
   transition: all 0.2s ease-out;
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 .top .s .circle .half-circle {
@@ -718,11 +786,9 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
 @media screen and (min-width: 768px) {
   .top .s:not(.-alt):hover .circle {
     -webkit-transform-origin: 65% 40%;
-        -ms-transform-origin: 65% 40%;
             transform-origin: 65% 40%;
     box-shadow: 0 40px rgba(68, 68, 68, 0.05);
     -webkit-transform: rotate(-45deg) scale(1.2);
-        -ms-transform: rotate(-45deg) scale(1.2);
             transform: rotate(-45deg) scale(1.2);
   }
 }
@@ -737,7 +803,6 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
   height: 30vh;
   bottom: auto;
   -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
 .top .s.-alt .circle.-bottom {
@@ -754,15 +819,12 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
 @media screen and (min-width: 768px) {
   .top .s.-alt:hover .circle {
     -webkit-transform-origin: 59% 49%;
-        -ms-transform-origin: 59% 49%;
             transform-origin: 59% 49%;
     -webkit-transform: rotate(-90deg) scale(1.2);
-        -ms-transform: rotate(-90deg) scale(1.2);
             transform: rotate(-90deg) scale(1.2);
   }
   .top .s.-alt:hover .circle.circle-shadow.-top, .top .s.-alt:hover .circle.circle-shadow.-bottom {
     -webkit-transform: rotate(-90deg) scale(1.2) translate(-40px, 40px);
-        -ms-transform: rotate(-90deg) scale(1.2) translate(-40px, 40px);
             transform: rotate(-90deg) scale(1.2) translate(-40px, 40px);
   }
 }
@@ -806,7 +868,6 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
   padding-bottom: 150%;
   transition: all 0.2s ease-out;
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
   background-image: linear-gradient(to top right, #3FA9F5, #0000FF);
 }
@@ -818,14 +879,12 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
 @media screen and (min-width: 768px) {
   .top .v:not(.-alt):hover .letter-inner::before {
     -webkit-transform: rotate(45deg) scale(1.2);
-        -ms-transform: rotate(45deg) scale(1.2);
             transform: rotate(45deg) scale(1.2);
   }
   .top .v:not(.-alt):hover .letter-inner::after {
     left: 8%;
     bottom: 53.5%;
     -webkit-transform: rotate(60deg) scale(1.2);
-        -ms-transform: rotate(60deg) scale(1.2);
             transform: rotate(60deg) scale(1.2);
   }
 }
@@ -845,7 +904,6 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
     bottom: 52%;
     transition: bottom .2s ease-out;
     -webkit-transform: rotate(45deg) scale(1.2);
-        -ms-transform: rotate(45deg) scale(1.2);
             transform: rotate(45deg) scale(1.2);
     -webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 50%, 0% 0%);
             clip-path: polygon(100% 0%, 100% 100%, 50% 50%, 0% 0%);
@@ -873,7 +931,6 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
     background-image: none;
     transition: all 0.2s ease-out;
     -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
             transform: rotate(45deg);
     background: rgba(68, 68, 68, 0.2);
   }
@@ -886,7 +943,6 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
     left: -50%;
     bottom: 22%;
     -webkit-transform: rotate(65deg);
-        -ms-transform: rotate(65deg);
             transform: rotate(65deg);
   }
 }
@@ -939,7 +995,6 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
   position: absolute;
   transition: all 0.2s ease-out;
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 50%, 0% 0%);
           clip-path: polygon(100% 0%, 100% 100%, 50% 50%, 0% 0%);
@@ -971,7 +1026,85 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
     height: 250%;
   }
 }
+.bottom .names {
+  white-space: nowrap;
+  position: absolute;
+  height: 16.6666667%;
+  width: calc( 100% - 50vh );
+  overflow: hidden;
+}
+.bottom .names.-top {
+  top: 22.22222%;
+}
+.bottom .names.-bottom {
+  bottom: 22.22222%;
+}
+.bottom .names .row {
+  top: 50%;
+  line-height: 9px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+}
+.bottom .names .row.-upper {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+.bottom .names .row.-lower {
+  -webkit-transform: translateY(12px);
+          transform: translateY(12px);
+}
+.bottom .names .list {
+  margin: 0;
+  padding: 0;
+  line-height: 9px;
+  display: inline-block;
+}
+.bottom .names .list li {
+  font-size: 12px;
+  color: #fff;
+  font-family: "GTHaptikRegular", sans-serif;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  list-style: none;
+  display: inline-block;
+}
+.bottom .names .list li span {
+  margin-left: 100px;
+}
 
+.scroll {
+  position: absolute;
+}
+
+@media screen and (max-height: 570px) {
+  .bottom .names .row.-lower {
+    display: none;
+  }
+  .bottom .names .row.-middle {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  .bottom .names .row.-upper {
+    -webkit-transform: translateY(-12px);
+            transform: translateY(-12px);
+  }
+}
+@media screen and (max-width: 1366px) {
+  .info .title {
+    left: 7.69vw;
+  }
+  .info .time {
+    left: 30.77vw;
+  }
+  .info .location {
+    left: 46.15vw;
+  }
+}
 @media screen and (max-width: 101vh) {
   .container {
     height: auto;
@@ -997,6 +1130,10 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
   }
   .submit br {
     display: block;
+  }
+
+  .scroll {
+    display: none;
   }
 
   .submit-modal {
@@ -1070,18 +1207,15 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
 }
 @media screen and (min-width: 768px) and (max-height: 830px) {
   .submit-modal {
-    right: 100px;
     width: auto;
-    min-width: 1px;
+    min-width: 450px;
     overflow: auto;
-    top: 11.111111%;
-    position: fixed;
-    bottom: 11.111111%;
+    position: absolute;
   }
   .submit-modal .modal-close {
-    top: 12%;
-    right: 105px;
-    position: fixed;
+    top: 5px;
+    right: 5px;
+    position: absolute;
   }
 }
 @media screen and (min-width: 101vh) and (max-width: 151vh) {
@@ -1093,7 +1227,6 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
     bottom: 52%;
     transition: bottom .2s ease-out;
     -webkit-transform: rotate(45deg) scale(1.2);
-        -ms-transform: rotate(45deg) scale(1.2);
             transform: rotate(45deg) scale(1.2);
     -webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 50%, 0% 0%);
             clip-path: polygon(100% 0%, 100% 100%, 50% 50%, 0% 0%);
@@ -1121,7 +1254,6 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
     background-image: none;
     transition: all 0.2s ease-out;
     -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
             transform: rotate(45deg);
     background: rgba(68, 68, 68, 0.2);
   }
@@ -1134,7 +1266,6 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
     left: -50%;
     bottom: 22%;
     -webkit-transform: rotate(65deg);
-        -ms-transform: rotate(65deg);
             transform: rotate(65deg);
   }
 }
@@ -1150,7 +1281,6 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
 .close-button:hover, .close-button:focus {
   outline: none;
   -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
           transform: scale(1.2);
 }
 .close-button .x {
@@ -1167,16 +1297,13 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
   background: #0000FF;
   position: absolute;
   -webkit-transform-origin: center;
-      -ms-transform-origin: center;
           transform-origin: center;
 }
 .close-button .x::before {
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 .close-button .x::after {
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
