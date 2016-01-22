@@ -745,6 +745,7 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
   line-height: 11px;
   letter-spacing: .06em;
   text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
 }
 .submit-modal p {
   margin: 0 0 17px 0;
