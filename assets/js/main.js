@@ -148,9 +148,7 @@ var Main = (function ($) {
           clearTimeout($.data(this, 'timer'));
           $.data(this, 'timer', setTimeout(function() {
              window.globalWheel = 0;
-             console.log(window.globalWheel);
           }, 250));
-          console.log(window.globalWheel);
           //thanks:  http://stackoverflow.com/questions/3515446/jquery-mousewheel-detecting-when-the-wheel-stops
         
           //event.preventDefault();
