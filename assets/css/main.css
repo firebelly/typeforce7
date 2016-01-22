@@ -701,9 +701,9 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
   left: 6.25vw;
   bottom: 11.11vh;
   color: #0000FF;
-  padding: 20px 35px 20px 35px;
+  padding: 20px 35px 3px 35px;
   background: #fff;
-  position: absolute;
+  position: fixed;
   pointer-events: none;
   transition: all 0.2s ease-out;
 }
@@ -736,9 +736,6 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
   font-size: 12px;
   letter-spacing: .18em;
   line-height: 15px;
-}
-.submit-modal p:last-child {
-  margin: 0;
 }
 .submit-modal ul {
   padding: 0;
@@ -1225,6 +1222,7 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
     padding: 0 20px;
     border-top: 20px solid #fff;
     border-bottom: 20px solid #fff;
+    position: fixed;
   }
   .submit-modal .-inner {
     top: 0;
@@ -1355,7 +1353,7 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
     width: auto;
     min-width: 450px;
     overflow: auto;
-    position: absolute;
+    position: fixed;
   }
   .submit-modal .modal-close {
     top: 5px;
@@ -1371,8 +1369,8 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
     width: auto;
     bottom: 20px;
     min-width: 1px;
-    position: fixed;
     padding: 0 20px;
+    position: fixed;
     border-top: 20px solid #fff;
     border-bottom: 20px solid #fff;
   }
