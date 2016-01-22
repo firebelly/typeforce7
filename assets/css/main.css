@@ -629,6 +629,7 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
 .info .title a, .info .time a, .info .location a {
   text-decoration: none;
   position: relative;
+  letter-spacing: .18em;
   line-height: 15px;
 }
 .info .title a::after, .info .time a::after, .info .location a::after {
@@ -644,6 +645,7 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
   margin: 0;
   font-size: 12px;
   line-height: 15px;
+  letter-spacing: .18em;
 }
 .info .title {
   left: 6.25vw;

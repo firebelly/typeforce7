@@ -165,6 +165,7 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
     a {
       text-decoration: none;
       position: relative;
+      letter-spacing: .18em;
       line-height: 15px;
       &::after {
         left: 0;
@@ -180,6 +181,7 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
       margin: 0;
       font-size: 12px;
       line-height: 15px;
+      letter-spacing: .18em;
     }
     font-size: 12px;
     font-family: $regular;

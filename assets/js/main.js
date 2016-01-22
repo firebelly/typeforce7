@@ -105,8 +105,6 @@ var Main = (function ($) {
           if (speed < -restSpeed*-dir) { speed+=decel*rand; }
         }
 
-        //window.globalWheel = 0;
-
         //don't exceed max speed
         speed = speed > maxSpeed ? maxSpeed : speed;
         speed = speed < -maxSpeed ? -maxSpeed : speed;
