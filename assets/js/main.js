@@ -88,7 +88,7 @@ var Main = (function ($) {
       function loopScroll($obj,speed,rand,dir,width) {
 
         //some vars
-        var stepTime = 10; //duration in ms of animate()
+        var stepTime = 50; //duration in ms of animate()
         var b1 = -width; //first boundary
         var b2 = 0; //second boundary
         var maxSpeed = 20000; //how fast can we go max?
@@ -135,7 +135,7 @@ var Main = (function ($) {
           }
         );
       }
-
+ 
 
       //check the scroll and relay with a global variable.    –I know, I know.... I'll try to do this better....
       window.globalWheel = 0;
@@ -148,10 +148,10 @@ var Main = (function ($) {
           clearTimeout($.data(this, 'timer'));
           $.data(this, 'timer', setTimeout(function() {
              window.globalWheel = 0;
-          }, 250));
+          }, 500));
           //thanks:  http://stackoverflow.com/questions/3515446/jquery-mousewheel-detecting-when-the-wheel-stops
         
-          //event.preventDefault();
+          if ( !($('.submit-modal').hasClass('-active')) ) { event.preventDefault(); }
 
        });
 
