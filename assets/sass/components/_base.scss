@@ -432,8 +432,10 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
     background: $pink;
     background-image: linear-gradient($pink 0%, $pink-light 75%);
     &:hover {
-      @include min-screen(768px) {
-        z-index: 2;
+      @media screen and (min-height: 760px) {
+        @include min-screen(768px) {
+          z-index: 2;
+        }
       }
     }
     .letter-inner {
@@ -463,16 +465,18 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
       }
     }
 
-    &:not(.-alt):hover {
-      @include min-screen(768px) {
-        .letter-inner {
-          &::before {
-            transform: rotate(45deg) scale(1.2);
-          }
-          &::after {
-            left: 8%;
-            bottom: 53.5%;
-            transform: rotate(60deg) scale(1.2);
+    @media screen and (min-height: 760px) {
+      &:not(.-alt):hover {
+        @include min-screen(768px) {
+          .letter-inner {
+            &::before {
+              transform: rotate(45deg) scale(1.2);
+            }
+            &::after {
+              left: 8%;
+              bottom: 53.5%;
+              transform: rotate(60deg) scale(1.2);
+            }
           }
         }
       }
@@ -487,55 +491,57 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
       position: absolute;
     }
 
-    &.-alt {
-      @include min-screen(768px) {
-        width: 50vh;
-        .letter-inner {
-          &::before {
-            left: -75%;
-            bottom: 52%;
-            transition: bottom .2s ease-out;
-            transform: rotate(45deg) scale(1.2);
-            clip-path: polygon(100% 0%, 100% 100%, 50% 50%, 0% 0%);
-          }
-          &::after {
-            display: none;
-          }
-          .-shadow {
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: -31%;
-            overflow: hidden;
-            position: absolute;
-            &::after {
+  @media screen and (min-height: 760px) {
+      &.-alt {
+        @include min-screen(768px) {
+          width: 50vh;
+          .letter-inner {
+            &::before {
               left: -75%;
-              height: 0;
-              bottom: 50%;
-              width: 150%;
-              content: '';
-              z-index: -1;
+              bottom: 52%;
+              transition: bottom .2s ease-out;
+              transform: rotate(45deg) scale(1.2);
+              clip-path: polygon(100% 0%, 100% 100%, 50% 50%, 0% 0%);
+            }
+            &::after {
+              display: none;
+            }
+            .-shadow {
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: -31%;
+              overflow: hidden;
               position: absolute;
-              padding-bottom: 150%;
-              background-image: none;
-              transition: $transition;
-              transform: rotate(45deg);
-              background: rgba($black, .2);
+              &::after {
+                left: -75%;
+                height: 0;
+                bottom: 50%;
+                width: 150%;
+                content: '';
+                z-index: -1;
+                position: absolute;
+                padding-bottom: 150%;
+                background-image: none;
+                transition: $transition;
+                transform: rotate(45deg);
+                background: rgba($black, .2);
+              }
             }
           }
-        }
 
-        &:hover {
-          @include min-screen(768px) {
-            .letter-inner {
-              &::before {
-                bottom: 31%;
-              }
-              .-shadow {
-                &::after {
-                  left: -50%;
-                  bottom: 22%;
-                  transform: rotate(65deg);
+          &:hover {
+            @include min-screen(768px) {
+              .letter-inner {
+                &::before {
+                  bottom: 31%;
+                }
+                .-shadow {
+                  &::after {
+                    left: -50%;
+                    bottom: 22%;
+                    transform: rotate(65deg);
+                  }
                 }
               }
             }
@@ -684,7 +690,7 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
 
       }
       &.-lower{
-        transform: translateY(12px);
+        transform: translateY(10px);
       }
     }
 
@@ -757,20 +763,20 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
   }
 }
 
-@media screen and (max-width: 1366px) {
-  .info {
+// @media screen and (max-width: 1366px) {
+//   .info {
 
-    .title{
-      left: 7.69vw;
-    }
-    .time{
-      left: 30.77vw;
-    }
-    .location{
-      left: 46.15vw;
-    }
-  }
-}
+//     .title{
+//       left: 7.69vw;
+//     }
+//     .time{
+//       left: 30.77vw;
+//     }
+//     .location{
+//       left: 46.15vw;
+//     }
+//   }
+// }
 
 @media screen and (min-width: 101vh) and (max-width: 1340px) {
   
@@ -784,6 +790,82 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
       transform: translateY(-50%);
     }
   }
+
+}
+
+
+
+
+@media screen and (max-height: 760px) {
+
+.v.alt-toggle{
+  &:hover{
+    cursor: auto;
+  }
+}
+
+
+ .info {
+
+    height: auto;
+
+    .title{
+      margin: 0;
+      top: auto;
+      left: 40px;
+      position: absolute;
+      white-space: nowrap;
+      padding-bottom: 10px;
+      transform: translateY(0%);
+      bottom: 0;
+      h1 {
+        font-size: 14px;
+        line-height: 11px;
+        display: inline-block;
+        left: 0;
+      }
+      p{
+        display: inline-block;
+      }
+      a {
+        display: inline-block;
+        .hide-small{
+          display: none;
+        }
+      }
+    }
+
+
+    .time,.location{
+      margin: 0;
+      z-index: 5;
+      left: calc(100vw - 50vh);
+      bottom: 75vh;
+      position: absolute;
+      h2{
+        white-space: nowrap;
+        transform: translateX(-50%);
+        text-align: center;
+      }
+      p{
+        white-space: nowrap;
+        transform: translateX(-50%);
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      padding-bottom: 0;
+    }
+
+    .time{
+      transform: translateY(-5px);
+    }
+    .location{
+      transform: translateY(61px);
+    }
+
+  }
+
 
 }
 
@@ -1062,3 +1144,24 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
 }
 
 
+ @media screen and (max-height: 580px) {
+  .top{
+    .v{
+      .logo{
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+ @media screen and (max-height: 640px) {
+  .bottom {
+    .n {
+      .sponsors {
+        display: none;
+      }
+    }
+  }
+}
