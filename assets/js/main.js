@@ -135,22 +135,19 @@ var Main = (function ($) {
           }
         );
       }
- 
+  
 
       //check the scroll and relay with a global variable.    –I know, I know.... I'll try to do this better....
       window.globalWheel = 0;
-      // $(window).bind('mousewheel', function(event) {
-      //   window.globalWheel = event.originalEvent.wheelDelta;
-      // });
-       $("body").mousewheel(function(event, delta) {
+      $(window).bind('mousewheel', function(event) {
 
-          window.globalWheel = delta;
+         window.globalWheel = event.originalEvent.wheelDelta;
           clearTimeout($.data(this, 'timer'));
+
           $.data(this, 'timer', setTimeout(function() {
              window.globalWheel = 0;
           }, 500));
-          //thanks:  http://stackoverflow.com/questions/3515446/jquery-mousewheel-detecting-when-the-wheel-stops
-        
+
           if ( !($('.submit-modal').hasClass('-active')) ) { event.preventDefault(); }
 
        });
