@@ -162,7 +162,6 @@ var Main = (function ($) {
         rand = (.4+Math.random()*.8); //pick random factor to give each slightly different speed
         speed = 30*rand*-dir;  //pick initial speed
 
-
         //figure out the width of 1 list
         numLi = $(this).find('li').length/3; //need this to get width
         width = 500*numLi //(of single list) -- had to set this by hand as jQuery.width() was returning bad numbers
